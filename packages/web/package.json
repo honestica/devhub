@@ -8,6 +8,7 @@
     "eject": "react-app-rewired eject",
     "format": "prettier --write '{.,src/**}/*.{js,jsx,ts,tsx}'",
     "lint": "tslint -p .",
+    "dockerize": "yarn build && docker build -t devhub:$(git rev-parse --short HEAD) .",
     "now-build": "build",
     "predeploy": "npm run build",
     "prepare": "cd .. && yarn patch-package",

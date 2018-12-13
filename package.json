@@ -15,6 +15,7 @@
     "compile": "yarn workspace @devhub/components build",
     "deploy": "yarn deploy:web",
     "deploy:web": "yarn workspace @devhub/web build && yarn now && yarn now alias",
+    "dockerize": "yarn workspace @devhub/web dockerize",
     "deploy:www": "pushd packages/www; now && now alias; popd;",
     "dev": "concurrently --kill-others \"yarn compile -w\" \"yarn workspace @devhub/web start\" \"yarn workspace @devhub/mobile start\"",
     "dev:web": "concurrently --kill-others \"yarn compile -w\" \"yarn workspace @devhub/web start\"",
